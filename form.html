@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Registration Form</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono&family=Fraunces:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="form.css">
+</head>
+<body>
+
+<div class="card">
+
+  <!-- FORM -->
+  <div id="form-wrap">
+    <div class="header">
+      <div class="tag">Registration</div>
+      <h1>Sign Up</h1>
+    </div>
+
+    <!-- Progress -->
+    <div class="progress">
+      <div class="seg" id="s0"></div>
+      <div class="seg" id="s1"></div>
+      <div class="seg" id="s2"></div>
+      <div class="seg" id="s3"></div>
+    </div>
+
+    <form id="form" novalidate>
+
+      <div class="field">
+        <label for="name">Full Name</label>
+        <input id="name" type="text" placeholder="Ada Lovelace" />
+        <div class="err-msg" id="name-err">Please enter your name.</div>
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="ada@example.com" />
+        <div class="err-msg" id="email-err">Enter a valid email address.</div>
+      </div>
+
+      <div class="field">
+        <label for="role">Role</label>
+        <select id="role">
+          <option value="">Select a role…</option>
+          <option value="student">Student</option>
+          <option value="developer">Developer</option>
+          <option value="designer">Designer</option>
+          <option value="other">Other</option>
+        </select>
+        <div class="err-msg" id="role-err">Please select a role.</div>
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Min. 8 characters" />
+        <div class="bars">
+          <div class="bar" id="b0"></div>
+          <div class="bar" id="b1"></div>
+          <div class="bar" id="b2"></div>
+          <div class="bar" id="b3"></div>
+        </div>
+        <div class="bar-label" id="bar-label">Enter a password</div>
+        <div class="err-msg" id="password-err">Min. 8 characters required.</div>
+      </div>
+
+      <div class="btn-row">
+        <button type="submit" class="btn-submit" id="submit-btn" disabled>Submit</button>
+        <button type="button" class="btn-reset" id="reset-btn">Reset</button>
+      </div>
+
+    </form>
+  </div>
+
+  <!-- SUCCESS -->
+  <div class="success" id="success">
+    <div class="success-icon">✓</div>
+    <h2>Welcome!</h2>
+    <p>Your account has been created.<br>Check your email to get started.</p>
+    <span class="again" id="again">Register another →</span>
+  </div>
+
+</div>
+
+<script src="form.js">
+
+</script>
+
+</body>
+</html>
